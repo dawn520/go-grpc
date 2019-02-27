@@ -11,7 +11,7 @@ import (
 // 注册服务
 func RegisterService(s *grpc.Server) {
 	// 注册Hello Service
-	proto.RegisterHelloServer(s, &service.Hello{})
+	proto.RegisterHelloServer(s, new(service.Hello))
 }
 
 // 启动服务

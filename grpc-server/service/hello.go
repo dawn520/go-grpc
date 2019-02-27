@@ -5,7 +5,7 @@ import (
 	"grpc-server/proto"
 )
 
-type Hello struct{}
+type Hello struct{ Base }
 
 func (h *Hello) SayHello(ctx context.Context, in *proto.HelloRequest) (*proto.HelloReply, error) {
 
